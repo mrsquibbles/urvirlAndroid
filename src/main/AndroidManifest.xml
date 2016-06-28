@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.urvirl.app" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/urvirl_logo_icon_purple"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Controller.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controller.GroupListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.GroupChatActivity"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Controller.GroupListActivity" />
+        </activity>
+        <activity
+            android:name=".Controller.CreateGroupActivity"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Controller.GroupListActivity" />
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:name=".Controller.GroupSearchActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Controller.GroupListActivity" />
+            <!-- ATTENTION: This intent was auto-generated. Follow instructions at
+              https://g.co/AppIndexing/AndroidStudio to publish your Android app deep links. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- ATTENTION: This data URL was auto-generated. We recommend that you use the HTTP scheme.
+                  TODO: Change the host or pathPrefix as necessary. -->
+                <data
+                    android:host="app.urvirl.com"
+                    android:pathPrefix="/groupsearch"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:name=".Controller.FriendSearchActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Controller.GroupListActivity" />
+            <!-- ATTENTION: This intent was auto-generated. Follow instructions at
+              https://g.co/AppIndexing/AndroidStudio to publish your Android app deep links. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- ATTENTION: This data URL was auto-generated. We recommend that you use the HTTP scheme.
+                  TODO: Change the host or pathPrefix as necessary. -->
+                <data
+                    android:host="app.urvirl.com"
+                    android:pathPrefix="/friendsearch"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".Controller.SettingsActivity" >
+        </activity>
+        <activity
+            android:name=".Controller.InboxActivity"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Controller.GroupListActivity" />
+        </activity>
+        <activity
+            android:name=".Controller.GroupMembersActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.InviteFriendsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.MemberInvitesActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.EventListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.EventActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.EditEventActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Controller.AllEventsActivity"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Controller.GroupListActivity">
+            </meta-data>
+        </activity>
+
+        <service android:name=".Controller.NotifyService"/><service
+        android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+        android:enabled="true" />
+    </application>
+
+</manifest>

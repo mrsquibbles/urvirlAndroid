@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".Controller.MainActivity">
+    <item android:id="@+id/create_group"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/new_group"
+        app:showAsAction="ifRoom|withText"/>
+    <item android:id="@+id/find_friends"
+        android:title="@string/find_friends"
+        app:showAsAction="never"/>
+    <item android:id="@+id/find_groups"
+        android:title="@string/find_groups"
+        app:showAsAction="never"/>
+    <item android:id="@+id/contact_us"
+        android:title="@string/contact_us"
+        app:showAsAction="never" />
+    <item android:id="@+id/my_events"
+        android:title="@string/my_events"
+        app:showAsAction="never"/>
+    <item android:id="@+id/inbox"
+        android:title="@string/inbox"
+        app:showAsAction="never"/>
+    <item android:id="@+id/log_out"
+        android:title="@string/log_out"
+        app:showAsAction="never"/>
+</menu>

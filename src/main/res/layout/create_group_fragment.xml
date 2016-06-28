@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/group_name"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/name" />
+
+        <EditText
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/owner"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/owner" />
+
+        <EditText
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/description" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:gravity="center" android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/light_blue"
+            android:text="@string/group_private"
+            android:id="@+id/group_private" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/toggle_turn_on"
+            android:textOff="@string/toggle_turn_off"
+            android:id="@+id/group_private_tb" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:gravity="center" android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/light_blue"
+                android:text="@string/memeber_events"
+                android:id="@+id/member_events" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/toggle_turn_on"
+                android:textOff="@string/toggle_turn_off"
+                android:id="@+id/member_events_tb"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="@string/create_group"
+            android:id="@+id/create_group"
+            android:background="@color/light_blue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+
+        <Button
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="@string/invite_friends"
+            android:id="@+id/invite_friend_btn"
+            android:background="@color/light_blue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="@string/invite_members"
+            android:id="@+id/invite_member_btn"
+            android:background="@color/light_blue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="@string/members"
+            android:id="@+id/members_btn"
+            android:background="@color/light_blue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:id="@+id/delete_btn"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+</ScrollView>
